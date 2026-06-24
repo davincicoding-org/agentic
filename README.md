@@ -1,4 +1,4 @@
-# davinci-ai
+# agentic
 
 A Claude Code / Cowork plugin marketplace.
 
@@ -23,8 +23,8 @@ the bundled `.mcp.json`.
 ## Install
 
 ```
-/plugin marketplace add davincicoding/davinci-ai
-/plugin install requirements-analyst@davinci-ai
+/plugin marketplace add davincicoding-org/agentic
+/plugin install requirements-analyst@agentic
 ```
 
 Then authorize Linear when prompted, and start with a phrase like
@@ -33,7 +33,7 @@ Then authorize Linear when prompted, and start with a phrase like
 ## Update
 
 ```
-/plugin marketplace update davinci-ai
+/plugin marketplace update agentic
 ```
 
 New versions flow in after the maintainer pushes to this repo.
