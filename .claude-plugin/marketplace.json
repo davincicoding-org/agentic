@@ -1,0 +1,14 @@
+{
+  "name": "davinci-ai",
+  "owner": {
+    "name": "davinci coding",
+    "email": "michael@davincicoding.ch"
+  },
+  "plugins": [
+    {
+      "name": "requirements-analyst",
+      "source": "./plugins/requirements-analyst",
+      "description": "Turn plain-language product needs into clean Linear specs — interview, draft, refine, prioritize, approve. For non-technical product owners."
+    }
+  ]
+}
