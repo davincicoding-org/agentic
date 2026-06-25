@@ -29,8 +29,13 @@ else:
   product's top-level areas — whatever it calls them (e.g. a **Features** list of
   bolded items). Treat those as the modules capabilities group under, and match
   them to the corresponding labels. Derive them live — never hardcode a list here.
-- **Workflow states.** Read the team's statuses (`list_issue_statuses`) and map
-  them to the three roles below by their *type*, since names vary per workspace.
+- **Roles.** The project description names the two people in the loop: the
+  **Creator** (drafts and builds the work) and the **Expert** (reviews and tests
+  it). Read who fills each — you set the assignee on every handoff. Derive live;
+  never hardcode names.
+- **Workflow states.** Read the team's statuses (`list_issue_statuses`) and match
+  them to the lifecycle below by position in the flow, since names vary per
+  workspace.
 - **Labels.** Check `list_issue_labels` for the module labels and the type labels
   the project uses.
 
@@ -66,16 +71,20 @@ description.**
 
 ## Lifecycle (per capability)
 
-Map to the team's actual states by type:
+The capability hands back and forth between the **Creator** and the **Expert**, and
+the assignee flips with the status. You own the first leg — drafting and review —
+and stay out of the build:
 
-- **raw / incomplete** — captured but not fully specced (a `backlog`-type state).
-- **awaiting sign-off** — complete draft, pending the owner's approval (an
-  `unstarted`/`started` review state).
-- **approved / ready** — owner has signed off, ready to build.
+- **Backlog** — the Creator drafts the capability; assigned to the **Expert** to
+  review. New capabilities land here.
+- **Refined** — the Expert has reviewed and signed off (the **Review** action);
+  reassign to the **Creator**, ready to build.
+- **In Progress** — the Creator is building it. Don't touch.
+- **In Review** — the Expert is testing the built capability. Don't touch.
 
-A capability is ready when every requirement in its description is fully specced
-and the owner signs off. Never move issues into the team's in-progress or done
-states — those belong to the dev team.
+Names vary per workspace, so match by position in the flow, not literal text. You
+only ever set the first two states — drafting and review are yours; building and
+testing belong to the Creator and Expert working outside this skill.
 
 ## Template
 
@@ -113,9 +122,9 @@ few. Titles (issue and requirement): short, plain, behavior-named.
 Infer intent — they won't name the verb.
 
 - **Overview** (no specific request) — read the board, group by module, one-line
-  status per capability (how many requirements it specs, and whether it's raw /
-  awaiting sign-off / approved), call out what needs attention, then offer next
-  steps. A standup summary, not a wall.
+  status per capability (how many requirements it specs, and where it sits in the
+  flow — Backlog, Refined, or already in build/test), call out what needs
+  attention, then offer next steps. A standup summary, not a wall.
 - **Discover** — check capabilities and requirements for gaps (bare capability,
   missing label/section/criteria, open questions) and report why, grouped by
   capability. Read-only.
@@ -124,11 +133,12 @@ Infer intent — they won't name the verb.
 - **Create** — first decide the level: a new capability, or a requirement added to
   an existing capability's description. Interview, show it forming, then on "yes"
   create the capability issue with its requirements written into the description,
-  or append the requirement block to the existing issue. The capability starts in
-  *awaiting sign-off* if every requirement is fully specced, *raw* if not. Big
-  needs → a few testable requirement blocks, not one sprawling one.
+  or append the requirement block to the existing issue. A new capability lands in
+  **Backlog**, assigned to the **Expert** to review. Big needs → a few testable
+  requirement blocks, not one sprawling one.
 - **Refine** — find weak spots, interview to fill them, show the update, write on
-  approval. Move *raw → awaiting sign-off* when every requirement is complete.
+  approval. This edits the spec in place; it doesn't move the capability through
+  the flow (that's Review's job).
 - **Review** — walk one capability to sign-off in phases, pausing after each so the
   owner can steer; update the issue between steps whenever they correct something.
   1. **Purpose** — read back what the capability is for. Fix it if they correct
@@ -141,12 +151,13 @@ Infer intent — they won't name the verb.
      ask the owner how each should behave; fold each answer into the requirement it
      touches (new acceptance criterion or behavior note).
 
-  When every phase is settled, move the capability to *approved* — the sign-off
-  this whole pass was building toward.
+  When every phase is settled, move the capability to **Refined** and reassign it
+  to the **Creator** — the sign-off this whole pass was building toward.
 - **Prioritize** — rank across capabilities (and within them) as Urgent / High /
   Medium / Low (Linear 1–4); propose an order with reasoning, confirm, set it.
-- **Approve** — verify every requirement in the capability is complete, then move
-  the issue to *approved*; else say what's missing.
+- **Approve** — the quick sign-off without the full Review walkthrough: verify
+  every requirement is complete, then move the issue to **Refined** and reassign it
+  to the **Creator**; else say what's missing.
 
 ## Tone
 
