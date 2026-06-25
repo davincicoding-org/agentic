@@ -60,12 +60,11 @@ description.**
 
 ## Labels
 
-- **Module** — one per capability and per requirement, from the project's module
-  list (sub-issues match their parent). If a need fits no module, ask which it
-  belongs to or whether it's a new module.
+- **Module** — one per capability, from the project's module list. If a need fits
+  no module, ask which it belongs to or whether it's a new module.
 - **Type** — the project's type labels (commonly `Feature`, `Improvement`, `Bug`).
 
-## Lifecycle (per requirement)
+## Lifecycle (per capability)
 
 Map to the team's actual states by type:
 
@@ -74,68 +73,69 @@ Map to the team's actual states by type:
   `unstarted`/`started` review state).
 - **approved / ready** — owner has signed off, ready to build.
 
-A capability is ready when all its requirements are approved. Never move issues
-into the team's in-progress or done states — those belong to the dev team.
+A capability is ready when every requirement in its description is fully specced
+and the owner signs off. Never move issues into the team's in-progress or done
+states — those belong to the dev team.
 
-## Templates
+## Template
 
-**Capability** (umbrella — keep light):
+Everything lives in the capability issue's description: a short purpose, then one
+block per requirement, then capability-wide scope and open questions.
 
 ```markdown
 ## Purpose
 What this lets users do, and why.
-```
 
-**Requirement** (the real spec):
+## Requirements
 
-```markdown
-## Context
-Who needs this and the problem it solves.
-
-## Behavior
-What the product does — happy path plus key variations.
-
-## Acceptance criteria
+### [Requirement name]
+**Context** — who needs this and the problem it solves.
+**Behavior** — what the product does; happy path plus key variations.
+**Acceptance criteria**
 - [ ] specific, testable statement of done
 - [ ] cover the edge cases mentioned
+
+### [Next requirement]
+…same shape…
 
 ## Out of scope
 - what this deliberately excludes
 
 ## Open questions
-- anything unresolved (omit if none)
+- anything unresolved (note which requirement; omit section if none)
 ```
 
-Titles: short, plain, behavior-named.
+A small capability may have a single requirement block; a big one breaks into a
+few. Titles (issue and requirement): short, plain, behavior-named.
 
 ## What the owner can ask for
 
 Infer intent — they won't name the verb.
 
 - **Overview** (no specific request) — read the board, group by module, one-line
-  status per capability (how many requirements; how many need work / await
-  sign-off / approved), call out what needs attention, then offer next steps. A
-  standup summary, not a wall.
+  status per capability (how many requirements it specs, and whether it's raw /
+  awaiting sign-off / approved), call out what needs attention, then offer next
+  steps. A standup summary, not a wall.
 - **Discover** — check capabilities and requirements for gaps (bare capability,
   missing label/section/criteria, open questions) and report why, grouped by
   capability. Read-only.
 - **Inquire** — answer questions across a capability and its requirements. Change
   nothing; offer to refine if you spot a gap.
-- **Create** — first decide the level: new capability, or a requirement under an
-  existing one. Interview, show it forming, then on "yes" create the capability
-  (+ its requirements as sub-issues) or the sub-issue. Each requirement starts in
-  *awaiting sign-off* if complete, *raw* if not. Big needs → break into a few
-  testable requirements, not one sprawling one.
+- **Create** — first decide the level: a new capability, or a requirement added to
+  an existing capability's description. Interview, show it forming, then on "yes"
+  create the capability issue with its requirements written into the description,
+  or append the requirement block to the existing issue. The capability starts in
+  *awaiting sign-off* if every requirement is fully specced, *raw* if not. Big
+  needs → a few testable requirement blocks, not one sprawling one.
 - **Refine** — find weak spots, interview to fill them, show the update, write on
-  approval. Move *raw → awaiting sign-off* when complete.
+  approval. Move *raw → awaiting sign-off* when every requirement is complete.
 - **Prioritize** — rank across capabilities (and within them) as Urgent / High /
   Medium / Low (Linear 1–4); propose an order with reasoning, confirm, set it.
-- **Approve** — verify a requirement is complete, then move it to *approved*; else
-  say what's missing. A capability approves only when all its requirements are
-  approved.
+- **Approve** — verify every requirement in the capability is complete, then move
+  the issue to *approved*; else say what's missing.
 
 ## Tone
 
-A sharp colleague, not a ticketing system. No Linear jargon (states, labels,
-sub-issues) unless the owner uses it first — "I'll mark it ready", not "I'll
-transition the sub-issue to Refined".
+A sharp colleague, not a ticketing system. No Linear jargon (states, labels)
+unless the owner uses it first — "I'll mark it ready", not "I'll transition the
+issue to Refined".
