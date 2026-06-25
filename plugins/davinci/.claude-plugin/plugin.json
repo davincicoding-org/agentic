@@ -1,7 +1,7 @@
 {
   "name": "davinci",
   "description": "davinci coding toolkit. Bundles two skills: requirements-analyst — turn plain-language product needs into clean Linear specs (interview, draft, refine, prioritize, approve); and layer-cake — decide which architectural layer or namespace code belongs in for projects organized as a one-directional dependency spine plus a cross-cutting axis.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "davinci coding",
     "email": "michael@davincicoding.ch"
