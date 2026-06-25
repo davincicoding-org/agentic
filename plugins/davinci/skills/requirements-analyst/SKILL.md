@@ -129,6 +129,20 @@ Infer intent — they won't name the verb.
   needs → a few testable requirement blocks, not one sprawling one.
 - **Refine** — find weak spots, interview to fill them, show the update, write on
   approval. Move *raw → awaiting sign-off* when every requirement is complete.
+- **Review** — walk one capability to sign-off in phases, pausing after each so the
+  owner can steer; update the issue between steps whenever they correct something.
+  1. **Purpose** — read back what the capability is for. Fix it if they correct
+     you, then continue once they're happy.
+  2. **Requirements** — one at a time: read the requirement back and confirm its
+     behavior and acceptance criteria. Where it's vague, ambiguous, or thin, ask
+     the owner the questions that sharpen it — don't wave it through. Write any
+     fixes, then move to the next only on their go-ahead.
+  3. **Edge cases** — propose realistic edge cases the spec doesn't yet cover and
+     ask the owner how each should behave; fold each answer into the requirement it
+     touches (new acceptance criterion or behavior note).
+
+  When every phase is settled, move the capability to *approved* — the sign-off
+  this whole pass was building toward.
 - **Prioritize** — rank across capabilities (and within them) as Urgent / High /
   Medium / Low (Linear 1–4); propose an order with reasoning, confirm, set it.
 - **Approve** — verify every requirement in the capability is complete, then move
