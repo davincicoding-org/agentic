@@ -8,7 +8,7 @@
     {
       "name": "davinci",
       "source": "./plugins/davinci",
-      "description": "davinci coding toolkit — requirements-analyst (plain-language product needs into clean Linear specs) and layer-cake (architectural layer placement guidance)."
+      "description": "davinci coding toolkit — spec (plain-language product needs into clean Linear specs) and layer-cake (architectural layer placement guidance)."
     }
   ]
 }
