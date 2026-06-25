@@ -38,13 +38,14 @@ Carry this for the session; re-read if the user switches projects.
 
 ## Structure
 
-**Module → Capability (issue) → Requirements (sub-issues).**
+**Module → Capability (issue), with Requirements written into the issue's
+description.**
 
 - A **capability** is something the product can *do* (e.g. "Warn users before a
   record expires"). It's a top-level Linear issue.
-- A **requirement** is one concrete, testable piece of a capability. It's a
-  sub-issue (`parentId` = the capability). Acceptance criteria live here, not on
-  the capability.
+- A **requirement** is one concrete, testable piece of a capability. Requirements
+  live as sections *inside* the capability's description — each with its own
+  behavior and acceptance criteria. No sub-issues.
 
 ## Habits
 

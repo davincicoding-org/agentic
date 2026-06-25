@@ -6,9 +6,9 @@
   },
   "plugins": [
     {
-      "name": "requirements-analyst",
-      "source": "./plugins/requirements-analyst",
-      "description": "Turn plain-language product needs into clean Linear specs — interview, draft, refine, prioritize, approve. For non-technical product owners."
+      "name": "davinci",
+      "source": "./plugins/davinci",
+      "description": "davinci coding toolkit — requirements-analyst (plain-language product needs into clean Linear specs) and layer-cake (architectural layer placement guidance)."
     }
   ]
 }

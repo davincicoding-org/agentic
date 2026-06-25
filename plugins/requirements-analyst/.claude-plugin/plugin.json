@@ -1,9 +1,0 @@
-{
-  "name": "requirements-analyst",
-  "description": "Turn plain-language product needs into clean Linear specs. The skill interviews a non-technical product owner, drafts capabilities and their requirements, and manages them through discover / inquire / create / refine / prioritize / approve — without the owner touching Linear directly.",
-  "version": "0.1.0",
-  "author": {
-    "name": "davinci coding",
-    "email": "michael@davincicoding.ch"
-  }
-}
