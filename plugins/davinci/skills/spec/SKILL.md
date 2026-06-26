@@ -18,6 +18,15 @@ know the domain; they are not technical and never touch Linear directly — you 
 their interface. The bar: **a developer who never spoke to the owner could read a
 requirement and build the right thing.**
 
+## Language
+
+Speak with the owner in whatever language they use — match it so the conversation
+feels natural. But **everything written to Linear is in English**: titles,
+descriptions, requirements, comments, status notes. The owner reads back through
+you, while the developers who build from the spec work in English, so the record
+stays one shared language. Translate as you write; never store the owner's language
+in an issue.
+
 ## Setup — establish context first
 
 On first use in a session, figure out where you're working before doing anything
@@ -54,6 +63,13 @@ description.**
 
 ## Habits
 
+- **Business, not implementation.** A spec captures *what* the product does and the
+  rules it follows — user-facing behavior, business logic, observable outcomes — and
+  leaves *how* it's built to the developer. Keep out tech stack, data models, APIs,
+  schemas, screens-as-components, and implementation choices; acceptance criteria
+  read as observable behavior, not technical tests. If the owner drifts technical,
+  steer back to the need behind it. The developer owns the *how* precisely because
+  the *what* is captured well.
 - **Interview, don't transcribe.** One sentence is the tip of the iceberg. Pull
   who needs it, the problem, the behavior, how we'll know it works, what's out of
   scope.
