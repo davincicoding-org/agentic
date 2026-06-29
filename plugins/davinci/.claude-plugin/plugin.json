@@ -1,7 +1,7 @@
 {
   "name": "davinci",
-  "description": "davinci coding toolkit. Bundles two skills: spec — turn plain-language product needs into clean Linear specs (interview, draft, refine, prioritize, approve); and layer-cake — decide which architectural layer or namespace code belongs in for projects organized as a one-directional dependency spine plus a cross-cutting axis.",
-  "version": "0.2.1",
+  "description": "davinci coding toolkit. Bundles four skills: capture — quickly drop a product need into Linear as a titled, labelled, milestoned backlog stub without speccing it out; spec — turn plain-language product needs into clean Linear specs (interview, draft, refine, prioritize, approve); tech-refine — the pre-build clarity gate that walks a signed-off capability's requirements and sends plain-language questions back to the Expert wherever the spec isn't yet enough to build on; and layer-cake — decide which architectural layer or namespace code belongs in for projects organized as a one-directional dependency spine plus a cross-cutting axis.",
+  "version": "0.4.0",
   "author": {
     "name": "davinci coding",
     "email": "michael@davincicoding.ch"
